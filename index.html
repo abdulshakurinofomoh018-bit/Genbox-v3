@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genbox v4 — Unreal‑style Playable Demos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">⚡ Genbox v4 — Unreal‑style</div>
+    <a class="cta" target="_blank" href="https://wa.me/2347044618291?text=Hello%2C%20I%27m%20interested%20in%20licensing%20Genbox%20v4.%20Can%20we%20talk%3F">💼 Request License</a>
+  </header>
+
+  <main>
+    <section class="panel toolbar">
+      <div class="group">
+        <span class="badge">Templates</span>
+        <button onclick="Engine.load('football')">⚽ Football</button>
+        <button onclick="Engine.load('racing')">🏎️ Racing</button>
+        <button onclick="Engine.load('wwe')">🤼 WWE</button>
+        <button onclick="Engine.load('openworld')">🌆 Open World</button>
+      </div>
+      <div class="group">
+        <span class="badge">Quality</span>
+        <label class="toggle"><input id="quality" type="checkbox" onchange="Engine.setHi(this.checked)"><span>Photorealistic</span></label>
+      </div>
+      <div class="group">
+        <span class="badge">Audio</span>
+        <label class="toggle"><input id="sound" type="checkbox" onchange="AudioSys.toggle(this.checked)" checked><span>Sound On</span></label>
+      </div>
+    </section>
+
+    <section class="playground">
+      <div class="panel stage">
+        <canvas id="stage" width="960" height="540"></canvas>
+
+        <!-- Touch controls for mobile -->
+        <div class="touchpad">
+          <div class="dpad">
+            <button data-dir="up">▲</button>
+            <div class="row">
+              <button data-dir="left">◀</button>
+              <button data-dir="down">▼</button>
+              <button data-dir="right">▶</button>
+            </div>
+          </div>
+          <div class="actions">
+            <button id="btnA">A</button>
+            <button id="btnB">B</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel console" id="log">
+        <div><strong>Genbox Runtime</strong> — WASD / Arrow keys to move, Space for action. On mobile, use on-screen controls.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Genbox by Inofomoh — Powered by Genbox AI</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
